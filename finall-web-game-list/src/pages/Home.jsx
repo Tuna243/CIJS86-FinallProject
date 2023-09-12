@@ -27,11 +27,10 @@ function Home() {
       </div>
       <div className="col-span-4 md:col-span-3">
         <div>
-          <Banner gameBanner={gameContext.gameList[4]} />
+          <Banner gameBanner={gameContext.gameList[Math.floor(Math.random() * gameContext.gameList.length)]} />
           <TrendingGames gameList={gameContext.gameList} />
           <GamesByGenresId
             gameListByGenreId={genreId}
-            // selctedGenresName={selctedGenresName}
           />
         </div>
       </div>

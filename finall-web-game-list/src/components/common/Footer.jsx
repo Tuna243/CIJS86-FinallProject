@@ -1,14 +1,15 @@
 import React from 'react'
 import { HiChevronDoubleRight } from "react-icons/hi2";
 import './assets/Fotter.css'
+import logo from '../../assets/images/Logo (3).png'
 const Footer = () => {
   return (
     <div className='bg-slate-400 mt-10'  >
     <div className='footer-top p-2'>
         <div className='footer-content text-white grid grid-flow-row items-center'>
           <div className='footer-item'>
-            <img src="../../assets/images/Logo (3).png" alt="" />
-            <a href="#" className='navbar-brand text-blue uppercase block'>
+            <a href="/"><img src={logo} alt="" className='w-[50px] h-[50px]'/></a>
+            <a href="/" className='navbar-brand text-blue uppercase block'>
               Shaki <span className='text-white'>games</span>
             </a>
             <p className='para-text'>Lorem ipsum dolor sitamt consectue adispicing duis soolici tudin ague suisomid. Nulla vullam dolor.</p>

@@ -8,6 +8,7 @@ import { GlobalApiContext } from "./contexts/GlobalApiContext";
 import { Routes, Route } from "react-router-dom";
 import GlobalApi from "./services/GlobalApi";
 import "./App.css";
+import NotFound from "./components/NotFound";
 function App() {
   const [theme, setTheme] = useState("light");
   const [gameList, setGameList] = useState();
@@ -26,7 +27,7 @@ function App() {
       setGameGenre(resp.data.results);
     });
   }, []);
-  
+
   return (
     <GlobalApiContext.Provider value={{ gameList, gameGenre }}>
       <ThemeContext.Provider value={{ theme, setTheme }}>
@@ -35,6 +36,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/Games/Details/:id" element={<GameDetail />}></Route>
+            <Route path="/*" element={<NotFound/>}></Route>
           </Routes>
           <Footer />
         </div>

@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { GlobalApiContext } from "../contexts/GlobalApiContext";
 
-function GenreList({setGenreId}) {
+function GenreList({ setGenreId }) {
   const { gameGenre } = useContext(GlobalApiContext);
   const [activeIndex, setActiveIndex] = useState(0);
   return (
